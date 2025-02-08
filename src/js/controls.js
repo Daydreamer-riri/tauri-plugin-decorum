@@ -92,6 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
 						clearTimeout(timer);
 						win.toggleMaximize();
 					});
+          btn.addEventListener("mousedown", () => {
+            clearTimeout(timer);
+          });
 					btn.addEventListener("mouseleave", () => clearTimeout(timer));
 					btn.addEventListener("mouseenter", () => {
 						timer = setTimeout(show_snap_overlay, 620);
@@ -140,8 +143,33 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 
 			#decorum-tb-close:hover {
-				background-color: rgba(255,0,0,0.7) !important;
+				background-color: rgba(255,0,0,0.7);
 			}
+
+      .decorum-tb-btn:hover {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+      }
+      .decorum-tb-btn:active {
+        background-color: rgba(0, 0, 0, 0.12) !important;
+      }
+      .decorum-tb-btn#decorum-tb-close:hover {
+        color: #fff !important;
+        background-color: #c42b1c !important;
+      }
+      .decorum-tb-btn#decorum-tb-close:active {
+        color: #fff !important;
+        background-color: rgba(196, 43, 28, 0.9) !important;
+      }
+
+      .dark .decorum-tb-btn {
+        color: #ffffff !important;
+      }
+      .dark .decorum-tb-btn:hover {
+        background-color: rgba(255, 255, 255, 0.06) !important;
+      }
+      .dark .decorum-tb-btn:active {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+      }
 		`;
 	});
 

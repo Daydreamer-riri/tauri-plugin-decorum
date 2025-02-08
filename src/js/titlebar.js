@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		tbEl.style.alignItems = "end";
 		tbEl.style.justifyContent = "end";
 		tbEl.style.backgroundColor = "transparent";
+    tbEl.addEventListener(
+      "contextmenu",
+      (e) => {
+        e.preventDefault();
+      },
+    )
 
 		// Create draggable area
 		const drag = document.createElement("div");
